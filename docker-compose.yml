@@ -1,0 +1,10 @@
+services:
+  mtproto-bot:
+    build: .
+    container_name: mtproto-bot
+    env_file:
+      - .env
+    volumes:
+      - ./work:/app/work
+      - ./session:/app/session
+    restart: unless-stopped
